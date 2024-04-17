@@ -1,0 +1,94 @@
+@use "../variables" as *;
+
+.advantages {
+  &__bg {
+    padding: 100px 0;
+    background-color: $carrot;
+    background-image: url("/img/pattern2.svg");
+    border-radius: 200px 200px 0 0;
+    min-height: 813px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -102px;
+      width: 257px;
+      height: 257px;
+      background-image: url("/img/star.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -338px;
+      z-index: -1;
+      right: 0;
+      width: 396px;
+      height: 682px;
+      background-image: url("/img/advantage-dog.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.3;
+    text-align: center;
+    color: $light;
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 417px;
+    align-items: center;
+    gap: 12px;
+
+    &::before {
+      content: "";
+      width: 256px;
+      height: 256px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &_one::before {
+      background-image: url("/img/soft-dog-house.png");
+    }
+    &_two::before {
+      background-image: url("/img/soft-dog-house3.png");
+    }
+    &_three::before {
+      background-image: url("/img/soft-dog-house2.png");
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.4;
+    text-align: center;
+    color: $light;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    color: $light;
+  }
+}
