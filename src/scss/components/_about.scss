@@ -1,0 +1,47 @@
+@use "../variables" as *;
+
+.about {
+  padding: 120px 0 278px;
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: block;
+      transform: translateY(-18px);
+      flex-basis: 50%;
+      height: 496px;
+      background-image: url("/img/pic.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__content {
+    padding: 10px 24px;
+    flex-basis: 50%;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

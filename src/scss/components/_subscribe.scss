@@ -1,0 +1,76 @@
+@use "../variables" as *;
+
+.subscribe {
+  padding: 120px 0;
+
+  &__container {
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__title {
+    max-width: 1000px;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.3;
+    text-align: center;
+    color: $green;
+  }
+
+  &__fieldset {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    max-width: 732px;
+    width: 100%;
+    border: none;
+  }
+
+  &__input {
+    border: 2px solid $purple;
+    border-radius: 40px;
+    padding: 16px 32px;
+    width: 100%;
+    background-color: transparent;
+
+    &::placeholder {
+      opacity: 0.4;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.4;
+      color: $green;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    background-color: $purple;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    padding: 16px 31px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    color: $light;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url("/img/arrow-up.png");
+    }
+  }
+}
