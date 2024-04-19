@@ -1,0 +1,21 @@
+$laptop: 1180px;
+$tanlet: 940px;
+$maobile: 540px;
+
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tanlet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $maobile) {
+    @content;
+  }
+}

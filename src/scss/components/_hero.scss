@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .hero {
   padding-top: 218px;
@@ -7,18 +8,55 @@
   background-color: $purple;
   background-image: url("/img/bg-dog.png"), url("/img/pattern.svg");
   background-size: contain, cover;
-  background-position: right, center;
+  background-position: right bottom, center;
   background-repeat: no-repeat;
 
-  &__title {
+  @include laptop {
+    padding-top: 148px;
+    padding-bottom: 172px;
+    background-image: url("/img/bg-dog-laptop.png"), url("/img/pattern.svg");
   }
 
-  &__img {
-    max-width: 810px;
+  @include tablet {
+    padding-top: 108px;
+    padding-bottom: 461px;
+    background-size: 655px 564px, cover;
+    background-image: url("/img/bg-dog-tablet.png"), url("/img/pattern.svg");
+  }
+
+  @include mobile {
+    padding-top: 100px;
+    padding-bottom: 284px;
+    background-size: 294px 256px, cover;
+    background-image: url("/img/bg-dog-mobile.png"), url("/img/pattern.svg");
+  }
+
+  &__title {
+    width: 810px;
+    max-width: 100%;
+
     margin-bottom: 50px;
+
+    @media (max-width: 1300px) {
+      margin-bottom: 32px;
+      width: 640px;
+    }
+
+    @include laptop {
+      width: 588px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+      width: 292px;
+    }
   }
 
   &__text {
     max-width: 420px;
+
+    @include laptop {
+      max-width: 360px;
+    }
   }
 }
