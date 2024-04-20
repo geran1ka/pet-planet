@@ -1,6 +1,13 @@
+$bigscreen: 1600px;
 $laptop: 1180px;
 $tanlet: 940px;
 $maobile: 540px;
+
+@mixin bigscreen {
+  @media (min-width: $bigscreen) {
+    @content;
+  }
+}
 
 @mixin laptop {
   @media (max-width: $laptop) {

@@ -7,9 +7,15 @@
   color: $light;
   background-color: $purple;
   background-image: url("/img/bg-dog.png"), url("/img/pattern.svg");
-  background-size: contain, cover;
+  background-size: contain, auto;
   background-position: right bottom, center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat, repeat;
+
+  @include bigscreen {
+    background-image: url("/img/bg-dog-bigscreen.png"), url("/img/pattern.svg");
+    background-position: left 50vw bottom 0, center;
+    background-size: 1850px, auto;
+  }
 
   @include laptop {
     padding-top: 148px;
@@ -40,6 +46,10 @@
     @media (max-width: 1300px) {
       margin-bottom: 32px;
       width: 640px;
+    }
+
+    @include bigscreen {
+      width: 980px;
     }
 
     @include laptop {
