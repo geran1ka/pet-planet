@@ -88,30 +88,11 @@
     right: 0;
     top: 0;
     bottom: 0;
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    justify-content: center;
-    background-color: $purple;
-    border: 1px solid transparent;
-    border-radius: 40px;
-    padding: 16px 31px;
-    font-weight: 700;
-    text-align: center;
-    color: $light;
     min-width: 209px;
 
     @include mobile {
       min-width: 54px;
       padding: 0;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      width: 16px;
-      height: 16px;
-      background-image: url("/img/arrow-up.png");
     }
   }
 

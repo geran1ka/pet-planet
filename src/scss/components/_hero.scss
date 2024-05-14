@@ -37,6 +37,27 @@
     background-image: url("/img/bg-dog-mobile.png"), url("/img/pattern.svg");
   }
 
+  &_store {
+    background-color: $green;
+    background-image: url("/img/bg-cat.png"), url("/img/pattern.svg");
+    background-size: 839px, auto;
+
+    @include bigscreen {
+      background-image: url("/img/bg-cat-bigscreen.png"),
+        url("/img/pattern.svg");
+      background-position: left 50vw bottom -430px, center;
+      background-size: 850px, auto;
+    }
+
+    @include laptop {
+      background-size: 639px, auto;
+    }
+
+    @include tablet {
+      background-size: 100%, auto;
+    }
+  }
+
   &__title {
     width: 810px;
     max-width: 100%;
@@ -64,9 +85,22 @@
 
   &__text {
     max-width: 420px;
+    margin-bottom: 60px;
+
+    @include bigscreen {
+      max-width: 540px;
+    }
 
     @include laptop {
+      margin-bottom: 40px;
       max-width: 360px;
     }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__store-link {
   }
 }
