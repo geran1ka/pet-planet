@@ -1,5 +1,6 @@
 @use "../variables" as *;
 @use "../media" as *;
+
 .store {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -21,6 +22,7 @@
   &__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 40px;
   }
 
@@ -65,11 +67,32 @@
   }
 
   &__cart-btn {
+    position: relative;
+    display: block;
+    width: 28px;
+    height: 28px;
+
     @include mobile {
       position: absolute;
       top: 20px;
       right: 20px;
     }
+  }
+
+  &__cart-count {
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    color: $light;
+  }
+
+  &__cart-svg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
   }
 
   &__title {
@@ -91,7 +114,7 @@
     justify-content: center;
 
     @include mobile {
-      grid-template-columns: repeat(auto-fit, 292px);
+      grid-template-columns: 1fr;
     }
   }
 
