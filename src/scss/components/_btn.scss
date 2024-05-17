@@ -51,6 +51,26 @@
     }
   }
 
+  &__carrot {
+    background-color: $carrot;
+
+    &:focus-visible {
+      outline-color: $purple;
+    }
+
+    &:hover {
+      background-color: #d1571ff1;
+    }
+
+    &:active {
+      scale: 0.9;
+    }
+
+    &:disabled {
+      background-color: rgba($carrot, 0.4);
+    }
+  }
+
   &_green {
     background-color: $green;
 

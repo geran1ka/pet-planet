@@ -2,9 +2,7 @@ import { btns } from "./const";
 import { renderProducts } from "./renderProducts";
 import { fetchProductByCategory } from "./server";
 
-const changeActiveBtn = async (event) => {
-  const target = event.target;
-
+const changeCategory = async ({ target }) => {
   btns.forEach((btn) => btn.classList.remove("store__category-btn_active"));
 
   target.classList.add("store__category-btn_active");
@@ -13,5 +11,10 @@ const changeActiveBtn = async (event) => {
 };
 
 export const changeCategoryProducts = () => {
-  btns.forEach((btn) => btn.addEventListener("click", changeActiveBtn));
+  btns.forEach(async (btn) => {
+    btn.addEventListener("click", changeCategory);
+    if (btn.classList.contains("store__category-btn_active")) {
+      renderProducts(await fetchProductByCategory(btn.textContent));
+    }
+  });
 };

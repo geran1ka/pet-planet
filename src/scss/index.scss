@@ -10,4 +10,9 @@
 @use "components/store";
 @use "components/card";
 
+@use "components/overlay";
+@use "components/modal";
+@use "components/radio";
+@use "components/order-message";
+
 @import "normalize.css";

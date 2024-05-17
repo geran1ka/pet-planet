@@ -214,5 +214,46 @@
         </address>
       </div>
     </footer>
+    <div class="overlay">
+      <div class="modal">
+        
+        <div class="modal__content">
+          <h2 class="modal__title">Корзина</h2>
+          <ul class="modal__cart-list">
+            <li class="modal__cart-item">
+              <img class="modal__cart-img" src="" alt="">
+                <h3 class="modal__cart-title">Домик-конус для питомцев</h3>
+                <div class="modal__cart-count-wrapper">
+                  <button class="modal__cart-btn modal__cart-btn_minus">-</button>
+                  <span class="modal__cart-count">1</span>
+                  <button class="modal__cart-btn modal__cart-btn_plus">+</button>
+              </div>
+              <p class="modal__cart-price">5700&nbsp;₽</p>
+
+            </li>
+          </ul>
+
+          <form class="modal__cart-form">
+            <fieldset class="modal__cart-fieldset">
+              <legend class="modal__cart-legend">
+                Самовывоз из магазина:
+              </legend>
+              <label class="modal__radio radio">ул. Адамавая 45/1
+                <input type="radio" class="radio__input" name="store" value="1" checked></label>
+              <label class="modal__radio radio">ул. Вишневая 74
+                <input type="radio" class="radio__input" name="store" value="2"></label>
+              <label class="modal__radio radio">ул. Чехова 106/28
+                <input type="radio" class="radio__input" name="store" value="3"></label>
+            </fieldset>
+            <div class="modal__cart-footer">
+              <button class="modal__cart-submit btn btn_purple">Заказать</button>
+              <p class="modal__cart-price">0&nbsp;₽</p>
+            </div>
+          </form>
+        </div>
+      </div>
+      <button class="overlay__close-btn">x</button>
+    </div>
   </body>
 </html>
+

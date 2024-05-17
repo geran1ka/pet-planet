@@ -1,6 +1,7 @@
+import { addToCart } from "./cartController";
 import { API_URL, cardList } from "./const";
 
-const createProductCard = ({ id, name, categories, photoUrl, price }) => {
+const createProductCard = ({ id, name, photoUrl, price }) => {
   const card = document.createElement("li");
   card.classList.add("store__item");
 
@@ -25,3 +26,9 @@ export const renderProducts = (products) => {
     cardList.append(productCard);
   });
 };
+
+cardList.addEventListener("click", ({ target }) => {
+  if (target.closest(".card__btn-add-cart")) {
+    addToCart(target.dataset.id);
+  }
+});

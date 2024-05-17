@@ -29,6 +29,7 @@
   &__categories {
     display: flex;
     gap: 28px;
+    overflow-x: auto;
 
     @include mobile {
       gap: 10px;
@@ -72,6 +73,10 @@
     width: 28px;
     height: 28px;
 
+    @include bigscreen {
+      vertical-align: middle;
+    }
+
     @include mobile {
       position: absolute;
       top: 20px;
@@ -86,6 +91,7 @@
     font-size: 12px;
     line-height: 1;
     text-align: center;
+    vertical-align: middle;
     color: $light;
   }
 
@@ -120,6 +126,7 @@
 
   &__item {
     display: flex;
+    justify-self: center;
   }
 
   &__card {

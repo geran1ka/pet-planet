@@ -1,10 +1,11 @@
+import { cartController } from "./scripts/cartController";
 import { changeCategoryProducts } from "./scripts/changeCategoryProducts";
-import { renderProducts } from "./scripts/renderProducts";
-import { fetchProductByCategory } from "./scripts/server";
+import { cartBtn } from "./scripts/const";
+cartBtn.addEventListener;
 
-const init = async () => {
+const init = () => {
   changeCategoryProducts();
-  renderProducts(await fetchProductByCategory("Домики"));
+  cartController();
 };
 
 init();
